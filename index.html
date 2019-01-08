@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple way to organize your inspirations">
+    <meta name="keywords" content="Stamp,Organize,Your,Inspirations">
+    <meta name="author" content="Constantine Doukas">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stamp | Organize Your Inspirations</title>
+    <link rel="stylesheet" href="styles/bootstrap-grid.css">    
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+<body>
+    <div class="stamp-hamburger-menu">
+        <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>  
+    </div>
+    <nav class="top-navigation-menu dark-theme">
+        <div class="top-nav-content">
+            <div class="stamp-logo"><h2><a class="hvr hvr-underline-from-center" href="#stamp" data-link-action="top navigation: stamp" title="Stamp">Stamp</a></h2></div>
+            <div class="top-navigation-items">
+                <div class="tn-item">
+                    <a class="hvr hvr-underline-from-center" href="#about" data-link-action="top navigation: about" title="About">About</a>
+                </div>
+                <div class="tn-item">
+                    <a class="hvr hvr-underline-from-center" href="#integrations" data-link-action="top navigation: integrations" title="Integrations">Integrations</a>
+                </div>
+                <div class="tn-item">
+                    <a class="hvr hvr-underline-from-center" href="#pricing" data-link-action="top navigation: pricing" title="Pricing">Pricing</a>
+                </div>
+                <div class="tn-item">
+                    <a class="hvr hvr-underline-from-center" href="#contacts" data-link-action="top navigation: contacts" title="Contacts">Contacts</a>
+                </div>                        
+            </div>
+        </div>
+    </nav>
+    <div class="container dark-theme">
+        <div class="col-md-4 col-sm-5 marquee-left">
+            <h1>Simple Way to<br/> Organize Your<br/> Inspirations</h1>
+            <p>I think what motivates people is not great hate, but great love for other people.</p>
+        </div>
+        <div class="col-sm-2 col-md-4 col-lg-2"></div>
+        <div class="col-md-4 col-sm-5 marquee-right">
+            <h4>Sign Up For Free</h4>
+            <form id="stamp-signup-form" class="stamp-form-container">
+                <div class="stamp-input-container validate-input" data-validate="Name is required.">
+                    <input class="stamp-input" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="stamp-input-container validate-input" data-validate="Email is required.">
+                    <input class="stamp-input" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="stamp-input-container password-container validate-input" data-validate="Password is required.">
+                    <input class="stamp-input" id="stamp-password" type="password" name="password" placeholder="Password">
+                    <input class="input-toggle" type="checkbox" id="toggle-password">
+                </div>
+                <div class="stamp-input-container stamp-signup">
+                    <button id="sign-up-button" class="hvr hvr-underline-from-center stamp-input" type="submit">Sign up</button>
+                </div>                                        
+            </form>
+            <div class="sign-up-disclaimer">
+                <span class="sign-up-gray">By clicking "Sign up", I agree to our</span><br/>
+                <a href="#terms-of-service" target="_blank" title="View our Terms of Service. This opens a new tab." data-link-action="signup form: terms of service">Terms of Service.</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+/* Constantine Doukas NOTE: This file was run through CSSLint and found no errors */
+
+/*==========================================
+FRAMEWORK OVERRIDES
+===========================================*/
+
+html {
+    height: 100vh; /* make the page the full height of the viewport */
+}
+
+body {
+    background-image: url('../assets/bg-resized-optimized.jpg'); /* open source image from unsplash */
+    background-color: #222222; /* fallback bg color */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 10px;  /* set an initial font size on the body, so we can later define sizes using em unit */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+@media screen and (min-width: 1700px) {
+    .container {
+        width: 1700px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    html {
+        height: auto;
+    }
+
+    body {
+        background-image: none !important; /* I'm forcing the bg image to be hidden and only showing a color on mobile, to save data for people who have slower 3G phone connections */
+        background-color: #222222; 
+    }
+}
+
+/*==========================================
+GENERAL
+===========================================*/
+
+@media screen and (min-width: 768px) {
+    .marquee-left {
+        margin-top: 100px;
+    }
+
+    .marquee-right {
+        margin-top: 95px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .marquee-left {
+        text-align: center;
+    }
+
+    .marquee-right {
+        margin-top: 50px;
+    }
+
+    .container p {
+        max-width: 55%;
+        margin: 10px auto;
+    }
+}
+
+@media(max-width: 500px) {
+    .container p {
+        max-width: 100%;
+    }
+}
+
+/*==========================================
+FONTS, COLORS, SIZES, ETC
+===========================================*/
+
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("../fonts/Roboto-Black.ttf") format("truetype"); /* load Roboto font from my font folder */
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype"); /* load Roboto font from my font folder */
+}
+
+.dark-theme p,
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme span {
+    color: #eeeeee; /* use a theme class so we can quickly change all the font colors if the bg image changes */
+}
+
+.dark-theme span.sign-up-gray {
+    color: #bbbbbb;
+}
+
+h1, h2, h4 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 6em;
+    line-height: 1.3;
+    font-family: "Roboto-Black";
+}
+
+h2 {
+    font-size: 3.5em;
+    font-family: "Roboto-Black";
+}
+
+h4 {
+    font-size: 2em;
+    font-family: "Roboto-Regular";
+    padding-bottom: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.container p {
+    font-size: 2.5em;
+    line-height: 1.4;
+    font-family: "Roboto-Regular";
+}
+
+@media screen and (min-width: 1700px) {
+    h1 {
+        font-size: 8em;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1699px) {
+    h1 {
+        font-size: 5em;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    h1 {
+        font-size: 4.3em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 3.3em;
+    }
+
+    .container p {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h1 br {
+        display: none;
+    }
+
+    h1 {
+        font-size: 4.6em;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+
+    h4 {
+        font-size: 1.4em;
+        padding-bottom: 20px;
+    }
+
+    .container p {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 3.6em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+
+    .container p {
+        font-size: 1.5em;
+    }
+}
+
+/*==========================================
+TOP NAVIGATION MENU
+===========================================*/
+
+.stamp-hamburger-menu {
+    cursor: pointer;
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;  /* needs to be 1 higher than the top navigation menu so it's clickable */
+}
+
+.stamp-hamburger-menu, .hamburger {
+    outline: none;
+}
+
+.top-navigation-menu {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    top: 0;
+    min-height: 100px;
+}
+
+.top-navigation-menu a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.top-navigation-items {
+    text-align: center;
+    padding-top: 45px;
+}
+
+.top-navigation-items a {
+    font-size: 2.2em;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    font-family: "Roboto-Regular";
+}
+
+.tn-item {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.stamp-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.stamp-logo a {
+    padding-bottom: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .stamp-hamburger-menu {
+     /*  display: none; */
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .top-navigation-items {
+        display: none;
+    }
+}
+
+/*==========================================
+REGISTRATION FORM
+===========================================*/
+
+.stamp-form-container {
+    border-radius: 5px;
+}
+
+.stamp-form-container {
+    background-color: rgba(255, 255, 255, 0.15); /* use rgba instead of opacity to create the transparent box illusion */
+}
+
+.stamp-form-container input {
+    outline: none;
+    border: none;
+}
+
+.validate-input {
+    position: relative;
+}
+
+.stamp-input-container {
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+
+.stamp-input-container.stamp-signup {
+    border-top-color: transparent;
+}
+
+input.stamp-input,
+button.stamp-input {
+    height: 70px;
+    padding: 0 20px 0 23px;
+}
+
+.stamp-input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-size: 2.4em;
+    color: #eeeeee;
+    line-height: 1.2;
+}
+
+.password-container {
+    border-bottom: none;
+}
+
+.input-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.stamp-signup button {
+    background-color: #2c99ec;
+    outline: none;
+}
+
+/* The following three styles are used to override the default browser placeholder font color. I would normally separate shared styles with commas, but that didn't seem to work in this case. */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #eeeeee;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #eeeeee;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #eeeeee;
+}
+
+.sign-up-disclaimer {
+    font-size: 1.9em;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 1em;
+    font-family: "Roboto-Regular";
+}
+
+.sign-up-disclaimer a {
+    color: #eeeeee;
+}
+
+/* This media query is used to handle the line break before "Terms of Service". We want it to break on desktop but not mobile. */
+@media screen and (max-width: 1199px) {
+    .sign-up-disclaimer {
+        line-height: 1.3;
+    }
+
+    .sign-up-disclaimer br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sign-up-disclaimer {
+        font-size: 1.5em;
+    }
+
+    input.stamp-input,
+    button.stamp-input {
+        height: 50px;
+    }
+
+    .stamp-input {
+        font-size: 1.6em;
+    }
+}
+/*==========================================
+FOOTER MENU
+===========================================*/
+
+/*==========================================
+HOVER.CSS
+===========================================*/
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #eeeeee;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/*==========================================
+HAMBURGER MENU
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+===========================================*/
+
+.hamburger {
+    padding: 15px 15px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: #eeeeee;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #eeeeee;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--collapse .hamburger-inner {
+    top: auto;
+    bottom: 0;
+    transition-duration: 0.13s;
+    transition-delay: 0.13s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), opacity 0.1s linear;
+}
+
+.hamburger--collapse .hamburger-inner::before {
+    transition: top 0.12s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--collapse.is-active .hamburger-inner {
+    transform: translate3d(0, -10px, 0) rotate(-45deg);
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--collapse.is-active .hamburger-inner::after {
+    top: 0;
+    opacity: 0;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), opacity 0.1s 0.22s linear;
+}
+
+.hamburger--collapse.is-active .hamburger-inner::before {
+    top: 0;
+    transform: rotate(-90deg);
+    transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
