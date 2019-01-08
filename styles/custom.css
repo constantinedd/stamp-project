@@ -5,7 +5,7 @@ FRAMEWORK OVERRIDES
 ===========================================*/
 
 html {
-    height: 100vh; /* make the page the full height of the viewport */
+    min-height: 100vh; /* make the page the full height of the viewport */
     position: relative;
 }
 
