@@ -6,6 +6,7 @@ FRAMEWORK OVERRIDES
 
 html {
     height: 100vh; /* make the page the full height of the viewport */
+    position: relative;
 }
 
 body {
@@ -351,6 +352,22 @@ button.stamp-input {
     font-weight: bold;
 }
 
+input[type=checkbox] {
+    display:none; /* hide the real checkbox so I can instead show a label as the eye open / eye closed image */
+}
+
+input[type=checkbox] + label {
+    display:inline-block;
+    padding: 0;
+    background-image: url('../assets/eye-closed.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+input[type=checkbox]:checked + label {
+    background-image: url('../assets/eye-open.png');
+}
+
 /* The following three styles are used to override the default browser placeholder font color. I would normally separate shared styles with commas, but that didn't seem to work in this case. */
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #eeeeee;
@@ -412,7 +429,7 @@ FOOTER MENU
 ===========================================*/
 
 .stamp-footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
